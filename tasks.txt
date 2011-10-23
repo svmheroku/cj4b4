@@ -1,11 +1,80 @@
 /pt/s/rl/cj/tasks.txt
 
-This url shows data from July:
-  - http://bot4.us/a1_us_stk_new
 
-I need a plot of forex performance.
-  - done
+Make the splash-png plots smaller:
+  - maybe put them in a fancybox like I saw at ooyala
 
-Make the splash-png plots smaller
+dialog boxes at bot4.herokuapp.com are broken:
+  - see how they behave on localhost
+  - localhost broke too
+  - looks like I am missing jquery
 
-Enhance the grid lines so I have more and they are blue and maybe darker.
+Study my layout:
+  - Now I see the obvious problem
+  - I have no call to jquery in my layouts
+
+question:
+  - I see this syntax:
+    - app/assets/javascripts/application.js
+  - Everything is commented out.
+  - What if I uncomment it?
+  - I see no effect
+  - bounce thin?
+  - bounce did nothing
+  - rake?
+
+rake task now broken:
+
+oracle@z3:/pt/w/b4/b4$ assets_precompile
+/home/oracle/.rvm/rubies/ruby-1.9.2-p290/bin/ruby bin/rake assets:precompile:all RAILS_ENV=production RAILS_GROUPS=assets
+rake aborted!
+Unexpected token: operator (=) (line: 9433, col: 0, pos: 253700)
+
+TypeError: object is not a function
+    at Object.CALL_NON_FUNCTION (native)
+    at new JS_Parse_Error (/oracle/tmp/execjs20111022-2687-11058sr.js:463:20)
+    at js_error (/oracle/tmp/execjs20111022-2687-11058sr.js:474:15)
+    at croak (/oracle/tmp/execjs20111022-2687-11058sr.js:923:17)
+    at token_error (/oracle/tmp/execjs20111022-2687-11058sr.js:930:17)
+    at unexpected (/oracle/tmp/execjs20111022-2687-11058sr.js:936:17)
+    at /oracle/tmp/execjs20111022-2687-11058sr.js:1304:17
+    at maybe_unary (/oracle/tmp/execjs20111022-2687-11058sr.js:1389:27)
+    at expr_ops (/oracle/tmp/execjs20111022-2687-11058sr.js:1416:32)
+    at maybe_conditional (/oracle/tmp/execjs20111022-2687-11058sr.js:1420:28)
+  (in /pt/webprops/b4/b4/app/assets/javascripts/application.js)
+
+Tasks: TOP => assets:precompile:primary
+(See full trace by running task with --trace)
+rake aborted!
+Command failed with status (1): [/home/oracle/.rvm/rubies/ruby-1.9.2-p290/b...]
+
+Tasks: TOP => assets:precompile
+(See full trace by running task with --trace)
+
+try to make it work again.
+
+I removed this file and now assets_precompile issues no errors:
+  - app/assets/javascripts/bot4us.js
+
+What happens if I edit application.js?
+  - same error
+
+lesson:
+  - avoid assets until I understand them better
+
+jquery:
+  - try adding /assets/application.js to my layout
+  - Now I see dialog boxes on locahost
+  - herokuapp too!
+
+work on:
+  - http://localhost:5000/fx_past
+  - here:
+    - /pt/w/b4/cj4b4/predictions/fx_past/
+    - and:
+      - /pt/w/b4/cj4b4/bin/
+      - create cronjobs named like this:
+        - cron_fx_past.bash
+      - I don like names:
+        - every10min.bash, it is confusing.
+

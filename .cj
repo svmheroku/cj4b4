@@ -4,9 +4,8 @@
 
 # I dot this file before running some shell scripts.
 
-. /pt/s/rluck/svm62/.orcl
+. /pt/w/b4/cj4b4/.orcl
 
-export rvm_path=/home/oracle/.rvm
-source /home/oracle/.rvm/scripts/rvm
-export PATH=/pt/s/rl/cj4svm/bin:/home/oracle/.rvm/bin:/home/oracle/bin:$PATH
-export CJ4SVM=/pt/s/rl/cj4svm
+export CJ4B4=/pt/w/b4/cj4b4
+export PATH=${CJ4B4}/bin:$PATH
+export B4=/pt/w/b4/b4
