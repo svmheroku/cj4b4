@@ -4,11 +4,11 @@
 
 # I use this script as a shell wrapper for index_spec.rb
 
-. /pt/s/rl/cj4svm/.cj
+. /pt/w/b4/cj4b4/.cj
 
 # cd to the right place
-echo 'cd $CJ4SVM/predictions/us_stk_c/'
-cd $CJ4SVM/predictions/us_stk_c/
+echo 'cd $CJ4B4/predictions/us_stk_c/'
+cd $CJ4B4/predictions/us_stk_c/
 echo now at:
 pwd
 

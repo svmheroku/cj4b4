@@ -30,22 +30,13 @@
 
 require "../../spec_helper.rb"
 
-describe "cj4svm helps me build both erb files and haml files which act as Rails templates" do
-
-  it "rvm should give me the correct version of Ruby." do
-    `which rvm`.should == "/home/oracle/bin/rvm\n"
-    `rvm list`.should include "ruby-1.9.2-head [ x86_64 ]"
-    `which ruby`.should include "/home/oracle/.rvm/rubies/ruby-1.9.2-head/bin/ruby"
-    `ruby -v`.should include "ruby 1.9.2p246 (2011-05-30 revision 31821) [x86_64-linux]"
-  end
-##
-
+describe "cj4b4 helps me build both erb files and haml files which act as Rails templates" do
 
   it "Should run the sql script fx_past.sql" do
-    `which sqt`.should == "/pt/s/rl/cj4svm/bin/sqt\n"
-    fx_past_sql = "/pt/s/rl/cj4svm/predictions/fx_past/fx_past.sql"
+    `which sqt`.should == "/pt/w/b4/cj4b4/bin/sqt\n"
+    fx_past_sql = "/pt/w/b4/cj4b4/predictions/fx_past/fx_past.sql"
     dglb = Dir.glob(fx_past_sql)
-    dglb.should == ["/pt/s/rl/cj4svm/predictions/fx_past/fx_past.sql"]
+    dglb.should == ["/pt/w/b4/cj4b4/predictions/fx_past/fx_past.sql"]
     File.size(fx_past_sql).should == 3399
     # The script should have an exit so it will not hang:
     `grep exit fx_past.sql`.should match /^exit\n/

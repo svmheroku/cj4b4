@@ -30,22 +30,14 @@
 
 require "../../spec_helper.rb"
 
-describe "cj4svm helps me build both erb files which act as Rails templates" do
-
-  it "rvm should give me the correct version of Ruby." do
-    `which rvm`.should == "/home/oracle/bin/rvm\n"
-    `rvm list`.should include "ruby-1.9.2-head [ x86_64 ]"
-    `which ruby`.should include "/home/oracle/.rvm/rubies/ruby-1.9.2-head/bin/ruby"
-    `ruby -v`.should include "ruby 1.9.2p246 (2011-05-30 revision 31821) [x86_64-linux]"
-  end
-##
+describe "cj4b4 helps me build both erb files which act as Rails templates" do
 
   it "Should run the sql script us_stk_past.sql" do
-    `which sqt`.should == "/pt/s/rl/cj4svm/bin/sqt\n"
+    `which sqt`.should == "/pt/w/b4/cj4b4/bin/sqt\n"
 
-    us_stk_past_sql = "/pt/s/rl/cj4svm/predictions/us_stk_past/us_stk_past.sql"
+    us_stk_past_sql = "/pt/w/b4/cj4b4/predictions/us_stk_past/us_stk_past.sql"
     dglb = Dir.glob(us_stk_past_sql)
-    dglb.should == ["/pt/s/rl/cj4svm/predictions/us_stk_past/us_stk_past.sql"]
+    dglb.should == ["/pt/w/b4/cj4b4/predictions/us_stk_past/us_stk_past.sql"]
     File.size(us_stk_past_sql).should == 5688
 
     # The script should have an exit so it will not hang:

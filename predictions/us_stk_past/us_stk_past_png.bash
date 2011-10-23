@@ -10,7 +10,7 @@
 # /tmp/us_stk_sunday_s.txt
 
 set -x
-cd /pt/s/rl/cj/predictions/us_stk_past/
+cd /pt/w/b4/cj4b4/predictions/us_stk_past/
 
 echo 'WK, WEEK_OF, RROWNUM, PREDICTION_COUNT, SUM_G24HR, CUM_SUM' > /tmp/us_stk_sunday_l.csv
 echo 'WK, WEEK_OF, RROWNUM, PREDICTION_COUNT, SUM_G24HR, CUM_SUM' > /tmp/us_stk_sunday_s.csv
@@ -19,7 +19,7 @@ grep '^201' /tmp/us_stk_sunday_l.txt >> /tmp/us_stk_sunday_l.csv
 grep '^201' /tmp/us_stk_sunday_s.txt >> /tmp/us_stk_sunday_s.csv
 
 /usr/bin/R -f us_stk_past_png.r
-cp /tmp/us_stk_sunday.png /pt/s/rl/svm/public/images/
+cp /tmp/us_stk_sunday.png /pt/w/b4/b4/public/images/
 
 exit 0
 

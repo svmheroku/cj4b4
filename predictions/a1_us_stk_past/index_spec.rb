@@ -26,15 +26,8 @@
 
 require "../../spec_helper.rb"
 
-describe "cj4svm helps me build both erb files which act as Rails templates" do
+describe "cj4b4 helps me build both erb files which act as Rails templates" do
 
-  it "rvm should give me the correct version of Ruby." do
-    `which rvm`.should == "/home/oracle/bin/rvm\n"
-    `rvm list`.should include "ruby-1.9.2-head [ x86_64 ]"
-    `which ruby`.should include "/home/oracle/.rvm/rubies/ruby-1.9.2-head/bin/ruby"
-    `ruby -v`.should include "ruby 1.9.2p246 (2011-05-30 revision 31821) [x86_64-linux]"
-  end
-##
   it "should copy then edit _us_stk_past_spool.html.erb" do
     `cat us_stk_past/_us_stk_past_spool.html.erb | sed '1,$s/us_stk_past/a1_us_stk_past/g'> a1_us_stk_past/_a1_us_stk_past_spool.html.erb`
     (Time.now - File.ctime("a1_us_stk_past/_a1_us_stk_past_spool.html.erb")).should < 2

@@ -4,11 +4,11 @@
 
 # I use this script as a shell wrapper for index_spec.rb
 
-. /pt/s/rl/cj4svm/.cj
+. /pt/w/b4/cj4b4/.cj
 
 # cd to the right place
-echo 'cd $CJ4SVM/predictions/us_stk_new/'
-cd $CJ4SVM/predictions/us_stk_new/
+echo 'cd $CJ4B4/predictions/us_stk_new/'
+cd $CJ4B4/predictions/us_stk_new/
 echo now at:
 pwd
 
@@ -20,9 +20,9 @@ sqt>/tmp/expdp_us_stk_new_prep.txt<<EOF
 @expdp_us_stk_new_prep.sql
 EOF
 # Next, I append data to the 2 tables:
-echo 'ssh z3 /pt/s/rl/cj4svm/predictions/us_stk_new/expdp_new.bash'
-ssh z3 /pt/s/rl/cj4svm/predictions/us_stk_new/expdp_new.bash
-rsync -vz z3:dpdump/us_stk_new.dpdmp ~/dpdump/
+echo 'ssh z2 /pt/w/b4/cj4b4/predictions/us_stk_new/expdp_new.bash'
+ssh z2 /pt/w/b4/cj4b4/predictions/us_stk_new/expdp_new.bash
+rsync -vz z2:dpdump/us_stk_new.dpdmp ~/dpdump/
 echo 'impdp trade/t table_exists_action=append dumpfile=us_stk_new.dpdmp'
 impdp trade/t table_exists_action=append dumpfile=us_stk_new.dpdmp
 

@@ -4,17 +4,17 @@
 
 # I use this script as a shell wrapper for index_spec.rb
 
-. /pt/s/rl/cj4svm/.cj
+. /pt/w/b4/cj4b4/.cj
 
 # cd to the right place
-cd $CJ4SVM/predictions/us_stk_past/
+cd $CJ4B4/predictions/us_stk_past/
 echo now at:
 pwd
 
 # Next, I expdp/impdp 2 new tables:
-# echo 'ssh z3 /pt/s/rl/cj4svm/predictions/us_stk_past/expdp_past.bash'
-# ssh z3 /pt/s/rl/cj4svm/predictions/us_stk_past/expdp_past.bash
-# rsync -vz z3:dpdump/us_stk_past.dpdmp ~/dpdump/
+# echo 'ssh z2 /pt/w/b4/cj4b4/predictions/us_stk_past/expdp_past.bash'
+# ssh z2 /pt/w/b4/cj4b4/predictions/us_stk_past/expdp_past.bash
+# rsync -vz z2:dpdump/us_stk_past.dpdmp ~/dpdump/
 # # For the 1st impdp use: table_exists_action=replace
 # echo 'impdp trade/t table_exists_action=replace dumpfile=us_stk_past.dpdmp'
 # impdp trade/t table_exists_action=replace dumpfile=us_stk_past.dpdmp tables=us_stk_pst21,stkscores21

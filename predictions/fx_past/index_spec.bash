@@ -7,7 +7,7 @@
 . /pt/w/b4/cj4b4/.cj
 
 # cd to the right place
-cd $CJ4B4/predictions/fx_past/
+cd ${CJ4B4}/predictions/fx_past/
 echo now at:
 pwd
 

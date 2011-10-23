@@ -1,7 +1,7 @@
 
 require "../../spec_helper.rb"
 
-describe "cj4svm helps me build both erb files which act as Rails templates" do
+describe "cj4b4 helps me build both erb files which act as Rails templates" do
 
   it "Should Fill each of the partials with data." do
 

@@ -6,15 +6,15 @@
 # My intention is to then impdp-append the new data 
 # into a target db after I rsync the dpdmp file to the target host.
 
-# Usage: ssh sourcehost /pt/s/rl/cj4svm/predictions/us_stk_past/expdp_past.bash
+# Usage: ssh sourcehost /pt/w/b4/cj4b4/predictions/us_stk_past/expdp_past.bash
 #        rsync sourcehost:dpdump/us_stk_past.dpdmp ~/dpdump/
 #        impdp trade/t table_exists_action=append dumpfile=us_stk_past.dpdmp
 
-. /pt/s/rl/cj4svm/.cj
+. /pt/w/b4/cj4b4/.cj
 
 # cd to the right place
-echo 'cd $CJ4SVM/predictions/us_stk_past/'
-cd $CJ4SVM/predictions/us_stk_past/
+echo 'cd $CJ4B4/predictions/us_stk_past/'
+cd $CJ4B4/predictions/us_stk_past/
 echo now at:
 pwd
 

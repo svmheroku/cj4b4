@@ -9,8 +9,10 @@
 # /tmp/fx_sunday_l.txt
 # /tmp/fx_sunday_s.txt
 
-set -x
-cd /pt/s/rl/cj/predictions/fx_past/
+. /pt/w/b4/cj4b4/.cj
+
+# cd to the right place
+cd $CJ4B4/predictions/fx_past/
 
 echo 'WK, WEEK_OF, RROWNUM, PREDICTION_COUNT, SUM_G5N, CUM_SUM' > /tmp/fx_sunday_l.csv
 echo 'WK, WEEK_OF, RROWNUM, PREDICTION_COUNT, SUM_G5N, CUM_SUM' > /tmp/fx_sunday_s.csv
@@ -19,7 +21,7 @@ grep '^201' /tmp/fx_sunday_l.txt >> /tmp/fx_sunday_l.csv
 grep '^201' /tmp/fx_sunday_s.txt >> /tmp/fx_sunday_s.csv
 
 /usr/bin/R -f fx_past_png.r
-cp /tmp/fx_sunday.png /pt/s/rl/svm/public/images/
+cp /tmp/fx_sunday.png /pt/w/b4/b4/public/images/
 
 exit 0
 
