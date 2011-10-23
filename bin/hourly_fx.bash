@@ -14,20 +14,20 @@ if [ -e "/tmp/script_hourly_fx_busy.txt" ]; then
 else
   date > /tmp/script_hourly_fx_busy.txt
 
-  cd /pt/s/rl/cj4svm/
+  cd /pt/s/rl/cj4b4/
   . ./.cj
 
   # Now for Forex,
   # use expdp to copy data from active-fx-db into local-db:
-  ssh z /pt/s/rl/cj4svm/bin/expdp_fx.bash
+  ssh z /pt/s/rl/cj4b4/bin/expdp_fx.bash
 
   rsync z:dpdump/fx.dpdmp ~/dpdump/
   impdp trade/t table_exists_action=replace dumpfile=fx.dpdmp
 
   # Copy data out of the DB into some partials:
-  cd /pt/s/rl/cj4svm/predictions/fx_past/
+  cd /pt/s/rl/cj4b4/predictions/fx_past/
   ./index_spec.bash
-  cd /pt/s/rl/cj4svm/predictions/a1_fx_past/
+  cd /pt/s/rl/cj4b4/predictions/a1_fx_past/
   ./index_spec.bash
 
   # Now copy the new data to the Rails site:
@@ -41,7 +41,7 @@ else
   git push origin master &
 
   # Now, pull the new data into the Varnish-cache at the server:
-  /pt/s/rl/cj4svm/bin/wgetit.bash &
+  /pt/s/rl/cj4b4/bin/wgetit.bash &
 
   rm -f /tmp/script_hourly_fx_busy.txt
 

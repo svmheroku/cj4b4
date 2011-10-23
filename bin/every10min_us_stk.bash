@@ -17,11 +17,11 @@ else
 
   # Start with stocks, Copy data from remote DBs to local DB.
   # Then, copy data out of local DB into some partials:
-  cd /pt/s/rl/cj4svm/predictions/us_stk_new/
+  cd /pt/s/rl/cj4b4/predictions/us_stk_new/
   ./index_spec.bash
-  cd /pt/s/rl/cj4svm/predictions/us_stk_c/
+  cd /pt/s/rl/cj4b4/predictions/us_stk_c/
   ./index_spec.bash
-  cd /pt/s/rl/cj4svm/predictions/a1_us_stk_new/
+  cd /pt/s/rl/cj4b4/predictions/a1_us_stk_new/
   ./index_spec.bash
   # Now copy the new data to the Rails site:
 
@@ -34,7 +34,7 @@ else
   git push origin master &
 
   # Now, pull the new data into the Varnish-cache at the server:
-  /pt/s/rl/cj4svm/bin/wgetit.bash
+  /pt/s/rl/cj4b4/bin/wgetit.bash
 
   rm -f  /tmp/script_e10_us_stk_busy.txt
 fi

@@ -19,7 +19,7 @@ else
 
   # Now for Forex,
   # use expdp to copy data from active-fx-db into local-db:
-  ssh z /pt/s/rl/cj4svm/bin/expdp_fx.bash
+  ssh z /pt/w/b4/cj4b4/bin/expdp_fx.bash
 
   rsync z:dpdump/fx.dpdmp ~/dpdump/
   impdp trade/t table_exists_action=replace dumpfile=fx.dpdmp
