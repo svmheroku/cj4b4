@@ -15,20 +15,21 @@ else
   date > /tmp/cron_fx_past_is_busy.txt
 
   cd /pt/w/b4/cj4b4/
-  . ./.cj
+  . .cj
 
   # Now for Forex,
   # use expdp to copy data from active-fx-db into local-db:
-  ssh z /pt/w/b4/cj4b4/bin/expdp_fx.bash
+  scp -p ${CJ4B4}/bin/expdp_fx.bash z:${CJ4B4}/bin/expdp_fx.bash
+  ssh z ${CJ4B4}/bin/expdp_fx.bash
 
   rsync z:dpdump/fx.dpdmp ~/dpdump/
   impdp trade/t table_exists_action=replace dumpfile=fx.dpdmp
 
   # Copy data out of the DB into some partials:
   cd ${CJ4B4}/predictions/fx_past/
-  ./index_spec.bash
+  # ./index_spec.bash
   cd ${CJ4B4}/predictions/a1_fx_past/
-  ./index_spec.bash
+  # ./index_spec.bash
 
   # Now copy the new data to the Rails site:
 

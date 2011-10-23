@@ -7,7 +7,7 @@
 
 # If the /tmp/script_e10_busy.txt exists, I should exit
 
-cd /pt/s/rl/cj4b4/bin/
+cd /pt/w/b4/cj4b4/bin/
 ./every10min_fx.bash
 # I need to enhance the script below:
 # ./every10min_us_stk.bash

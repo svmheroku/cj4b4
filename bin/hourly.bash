@@ -5,7 +5,7 @@
 # I use this script to copy data out of the DB into some partials.
 # Then, it uses git to copy those partials to the Rails site.
 
-cd /pt/s/rl/cj4b4/bin/
+cd /pt/w/b4/cj4b4/bin/
 ./hourly_fx.bash
 ./hourly_us_stk.bash
 
