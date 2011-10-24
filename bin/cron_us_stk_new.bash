@@ -19,9 +19,9 @@ else
   cd /pt/w/b4/cj4b4/predictions/us_stk_new/
   ./index_spec.bash
   cd /pt/w/b4/cj4b4/predictions/us_stk_c/
-#  ./index_spec.bash
+  ./index_spec.bash
   cd /pt/w/b4/cj4b4/predictions/a1_us_stk_new/
-#  ./index_spec.bash
+  ./index_spec.bash
   # Now copy the new data to the Rails site:
 
   set -x
