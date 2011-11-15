@@ -21,8 +21,6 @@ rsync z:dpdump/fx.dpdmp ~/dpdump/
 echo 'echo impdp trade/t table_exists_action=replace dumpfile=fx.dpdmp'
 impdp trade/t table_exists_action=replace dumpfile=fx.dpdmp
 
-
-
 # Copy data out of the DB into some partials:
 echo 'echo cd ${CJ4B4}/predictions/fx_past/'
 cd ${CJ4B4}/predictions/fx_past/
@@ -30,33 +28,48 @@ cd ${CJ4B4}/predictions/fx_past/
 echo 'echo ./index_spec.bash'
 ./index_spec.bash
 
-exit
-
+echo 'echo cd ${CJ4B4}/predictions/a1_fx_past/'
 cd ${CJ4B4}/predictions/a1_fx_past/
-./index_spec.bash
 
+echo 'echo ./index_spec.bash'
+./index_spec.bash
 
 # Copy data out of the DB into some partials:
+echo 'echo cd /pt/w/b4/cj4b4/predictions/fx_new/'
 cd /pt/w/b4/cj4b4/predictions/fx_new/
+
+echo 'echo ./index_spec.bash'
 ./index_spec.bash
+
+echo 'echo cd /pt/w/b4/cj4b4/predictions/a1_fx_new/'
 cd /pt/w/b4/cj4b4/predictions/a1_fx_new/
+
+echo 'echo ./index_spec.bash'
 ./index_spec.bash
-
-
 
 # Start with stocks, Copy data out of the DB into some partials:
 
+echo 'echo cd /pt/w/b4/cj4b4/predictions/us_stk_past/'
 cd /pt/w/b4/cj4b4/predictions/us_stk_past/
+
+echo 'echo ./index_spec.bash'
 ./index_spec.bash
 
 cd /pt/w/b4/cj4b4/predictions/a1_us_stk_past/
 ./index_spec.bash
 
-# Then, copy data out of local DB into some partials:
+echo 'echo cd /pt/w/b4/cj4b4/predictions/us_stk_new/'
 cd /pt/w/b4/cj4b4/predictions/us_stk_new/
+
+echo 'echo ./index_spec.bash'
 ./index_spec.bash
+
+echo 'echo cd /pt/w/b4/cj4b4/predictions/us_stk_c/'
 cd /pt/w/b4/cj4b4/predictions/us_stk_c/
+
+echo 'echo ./index_spec.bash'
 ./index_spec.bash
+
 cd /pt/w/b4/cj4b4/predictions/a1_us_stk_new/
 ./index_spec.bash
 

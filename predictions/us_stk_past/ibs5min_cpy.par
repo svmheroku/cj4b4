@@ -1,3 +1,3 @@
-QUERY='WHERE ydate > sysdate - 5'
+QUERY='WHERE ydate > sysdate - 15'
 DUMPFILE=ibs5min_cpy.dpdmp
 TABLES=ibs5min

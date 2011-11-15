@@ -157,8 +157,10 @@ describe "cj4b4 helps me build both erb files which act as Rails templates" do
       else
         # Generate some a-elements from th-elements.
         th_elems = table_elem.search("th")
+        th_elems0 = html_doc.search("table")[0].search("th")
+        th_elems2 = html_doc.search("table")[2].search("th")
 
-        th_elems.each {|elm| 
+        (th_elems0 + th_elems2).each {|elm| 
           ei_h =   elm.inner_html
           ei_hclass = ei_h.gsub(/\n/,'').gsub(/\<br\>/,'').gsub(/\<br \/>/,'').gsub(/ /,'').downcase
           elm.inner_html = "<a href='#' class='#{ei_hclass}'>#{ei_h}</a>"
