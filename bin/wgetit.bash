@@ -11,6 +11,7 @@ rm -f predictions fx us_stk fx_new fx_past us_stk_new us_stk_past contact blog s
 rm -f books tos about index disclaimer
 rm -f predictions.? fx.? us_stk.? fx_new.? fx_past.? us_stk_new.? us_stk_past.? contact.? blog.? site_map.?
 rm -f glossary.?  leadership_team.? books.? tos.? about.? index.? a1_fx_past.* faq.* disclaimer.*
+rm -f fx_sunday.png us_stk_sunday.png
 
 wget http://bot4.herokuapp.com
 
@@ -49,5 +50,8 @@ wget http://bot4.herokuapp.com/a1/predictions
 wget http://bot4.herokuapp.com/a1/tos
 wget http://bot4.herokuapp.com/a1/disclaimer
 wget http://bot4.herokuapp.com/a1_fx_past
+
+wget http://bot4.herokuapp.com/images/us_stk_sunday.png
+wget http://bot4.herokuapp.com/images/fx_sunday.png
 
 exit 0

@@ -26,7 +26,7 @@ par(mar=c(6.2, 4.1, 4.1, 2.1))
 plot(us_stk_sunday_s$WEEK_OF, us_stk_sunday_s$CUM_SUM
   ,main = "Weekly Performance of DanBot US Stock Predictions (Green = Bullish, Red = Bearish)"
   ,ylab = "US Dollars"
-  ,ylim = c(-11000, 11000)
+  ,ylim = c(-13000, 8000)
   ,las = ytl_perp
   ,type = "n"
 )
@@ -49,7 +49,7 @@ plot(us_stk_sunday_l$WEEK_OF, us_stk_sunday_l$CUM_SUM
   ,type = "n"
   ,ylab = " "
   ,xlab = " "
-  ,ylim = c(-11000, 11000)
+  ,ylim = c(-13000, 8000)
 )
 
 # Connect the dots:

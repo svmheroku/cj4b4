@@ -26,7 +26,7 @@ par(mar=c(6.2, 4.1, 4.1, 2.1))
 plot(fx_sunday_s$WEEK_OF, fx_sunday_s$CUM_SUM
   ,main = "Weekly Performance of DanBot Forex Predictions (Green = Bullish, Red = Bearish)"
   ,ylab = "Raw Percentage"
-  ,ylim = c(-11.0, 11.0)
+  ,ylim = c(-12.0, 12.0)
   ,las = ytl_perp
   ,type = "n"
 )
@@ -49,7 +49,7 @@ plot(fx_sunday_l$WEEK_OF, fx_sunday_l$CUM_SUM
   ,type = "n"
   ,ylab = " "
   ,xlab = " "
-  ,ylim = c(-11.0, 11.0)
+  ,ylim = c(-12.0, 12.0)
 )
 
 # Connect the dots:
