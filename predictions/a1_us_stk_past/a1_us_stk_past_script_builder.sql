@@ -14,7 +14,7 @@ SELECT
 FROM us_stk_sunday_s
 WHERE price_24hr > 0
 AND rnng_crr1 > 0
-GROUP BY TO_CHAR(ydate,'WW')
+GROUP BY TO_CHAR(ydate,'YYYY-WW')
 ORDER BY MIN(ydate)
 /
 SPOOL OFF

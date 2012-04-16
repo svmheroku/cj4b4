@@ -25,6 +25,8 @@ impdp trade/t table_exists_action=replace dumpfile=fx.dpdmp
 echo 'echo cd ${CJ4B4}/predictions/fx_past/'
 cd ${CJ4B4}/predictions/fx_past/
 
+exit
+
 echo 'echo ./index_spec.bash'
 ./index_spec.bash
 

@@ -26,7 +26,7 @@ pair
 ,LEAD(clse,12*1,NULL)OVER(PARTITION BY pair ORDER BY ydate) price_1hr
 ,LEAD(clse,12*6,NULL)OVER(PARTITION BY pair ORDER BY ydate) price_6hr
 FROM di5min
-WHERE ydate > '2011-01-30'
+WHERE ydate > '2011-10-30'
 AND clse > 0
 ORDER BY pair,ydate
 /
@@ -60,8 +60,8 @@ AND   s.targ='gattn'
 AND l.prdate = s.prdate
 AND l.prdate = m.prdate
 -- Speed things up:
-AND l.ydate > '2011-01-30'
-AND s.ydate > '2011-01-30'
+AND l.ydate > '2011-10-30'
+AND s.ydate > '2011-10-30'
 /
 
 ANALYZE TABLE fxpst12n ESTIMATE STATISTICS SAMPLE 22 PERCENT;

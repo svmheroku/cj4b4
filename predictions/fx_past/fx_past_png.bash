@@ -21,6 +21,7 @@ grep '^201' /tmp/fx_sunday_l.txt >> /tmp/fx_sunday_l.csv
 grep '^201' /tmp/fx_sunday_s.txt >> /tmp/fx_sunday_s.csv
 
 /usr/bin/R -f fx_past_png.r
+set -x
 cp /tmp/fx_sunday.png /pt/w/b4/b4/public/images/
 
 exit 0

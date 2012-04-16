@@ -230,7 +230,7 @@ SELECT
 FROM us_stk_sunday_s
 WHERE price_24hr > 0
 AND rnng_crr1 > 0
-GROUP BY TO_CHAR(ydate,'WW')
+GROUP BY TO_CHAR(ydate,'YYYY'),TO_CHAR(ydate,'WW')
 ORDER BY MIN(ydate)
 /
 
@@ -246,7 +246,9 @@ SELECT
 FROM us_stk_sunday_s
 WHERE price_24hr > 0
 AND rnng_crr1 > 0
-GROUP BY TO_CHAR(ydate,'WW')
+-- I have 2011 already
+AND ydate>'2012-01-07'
+GROUP BY TO_CHAR(ydate,'YYYY'),TO_CHAR(ydate,'WW')
 ORDER BY MIN(ydate)
 /
 SPOOL OFF
