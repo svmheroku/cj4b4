@@ -7,8 +7,6 @@ cd /pt/w/b4/cj/predictions/fx_past/
 echo ./fx_past_png_yr.bash $1
 ./fx_past_png_yr.bash $1
 
-exit
-
 cd /pt/w/b4/cj/predictions/us_stk_past/
 ./us_stk_past_png_yr.bash $1
 
